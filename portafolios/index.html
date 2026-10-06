@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="es" class="dark scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pablo Navas | Portafolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            red: '#cc0000',
+                            aqua: '#40e0d0',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts & Font Awesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- External CSS -->
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body class="bg-gray-950 text-white min-h-screen flex flex-col justify-between">
+
+    <header class="fixed top-0 left-0 w-full z-40 glass-nav transition-all duration-300 border-b border-gray-800/50">
+       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">      
+            <div class="flex items-center justify-between h-20">
+                
+                <a href="#inicio" class="flex items-center gap-3 group">
+                    <i class="fas fa-fire text-2xl flame-icon"></i>
+                    <span class="font-bold text-xl sm:text-2xl tracking-tight text-white group-hover:opacity-90 transition-opacity">
+                        Pablo<span class="text-brand-aqua">Navas</span>
+                    </span>
+                </a>
+
+                <nav class="hidden md:flex items-center space-x-6 font-medium text-white">
+                    <a href="#inicio" data-en="Home" class="hover:text-brand-aqua transition-colors">Inicio</a>
+                    <a href="#sobre-mi" data-en="About Me" class="hover:text-brand-aqua transition-colors">Sobre Mí</a>
+                    <a href="#habilidades" data-en="Technical Skills" class="hover:text-brand-aqua transition-colors">Habilidades técnicas</a>
+                    <a href="#proyectos" data-en="Projects" class="hover:text-brand-aqua transition-colors">Proyectos</a>
+                    <a href="#habilidades-adaptativas" data-en="Adaptive Skills" class="hover:text-brand-aqua transition-colors">Habilidades Adaptativas</a>
+                    <a href="#contacto" data-en="Contact" class="hover:text-brand-aqua transition-colors">Contacto</a>
+                    <a href="/CV Pablo Alejandor Navas Paredes.pdf (7).pdf">CV</a>
+                 </nav>
+
+                <div class="flex items-center space-x-3">
+                    <div class="flex items-center bg-gray-800 rounded-lg p-1 border border-gray-700">
+                        <button id="btnEs" class="px-2.5 py-1 text-xs font-bold rounded bg-brand-red text-white transition-all">ES</button>
+                        <button id="btnEn" class="px-2.5 py-1 text-xs font-bold rounded text-gray-400 hover:text-white transition-all">EN</button>
+                    </div>
+
+                    <button id="mobileMenuBtn" aria-label="Abrir Menú" class="md:hidden p-2.5 rounded-lg bg-gray-800 text-brand-red hover:bg-gray-700 transition-colors">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="header-fire"></div>
+
+        <div id="mobileMenu" class="hidden md:hidden bg-gray-900 border-b border-brand-red border-opacity-30">
+            <div class="px-4 py-4 space-y-2 flex flex-col font-medium">
+                <a href="#inicio" data-en="Home" class="mobile-nav-link p-3 rounded-lg hover:bg-brand-red/20 text-white">Inicio</a>
+                <a href="#sobre-mi" data-en="About Me" class="mobile-nav-link p-3 rounded-lg hover:bg-brand-red/20 text-white">Sobre Mí</a>
+                <a href="#habilidades" data-en="Technical Skills" class="mobile-nav-link p-3 rounded-lg hover:bg-brand-red/20 text-white">Habilidades técnicas</a>
+                <a href="#proyectos" data-en="Projects" class="mobile-nav-link p-3 rounded-lg hover:bg-brand-red/20 text-white">Proyectos</a>
+                <a href="#habilidades-adaptativas" data-en="Adaptive Skills" class="mobile-nav-link p-3 rounded-lg hover:bg-brand-red/20 text-white">Habilidades Adaptativas</a>
+                <a href="#contacto" data-en="Contact" class="mobile-nav-link p-3 rounded-lg hover:bg-brand-red/20 text-white">Contacto</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow pt-20">
+        
+        <section id="inicio" class="min-h-[85vh] flex items-center justify-center py-20 px-4">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-center gap-12 md:gap-32">        
+                      <div class="relative shrink-0 group">
+                    <div class="absolute -inset-2 rounded-full bg-gradient-to-tr from-brand-red to-brand-aqua opacity-60 blur-lg group-hover:opacity-90 transition duration-500"></div>
+                    <img src="./1789942537014.png" alt="Foto de Pablo Navas" class="relative w-56 h-56 md:w-72 md:h-72 rounded-full border-4 border-gray-800 shadow-2xl object-cover z-10">
+                </div>
+                
+                <div class="flex flex-col items-center md:items-start text-center md:text-left">
+                    <p data-en="Backend & Full Stack Developer" class="text-brand-aqua font-semibold text-lg mb-2 tracking-wide uppercase">Desarrollador Backend & Full Stack</p>
+                    <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-4 text-white leading-tight">
+                        <span class="fire-text">Pablo Navas</span>
+                    </h1>
+                    <p data-en="Passionate about technology, building robust servers, efficient databases, and full web experiences with an innovative touch." class="text-lg text-white mb-8 max-w-lg leading-relaxed font-normal">
+                        Apasionado por la tecnología, construyendo servidores robustos, bases de datos eficientes y experiencias web completas con un toque de innovación.
+                    </p>
+                    
+                    <div class="flex flex-wrap justify-center md:justify-start gap-4">
+                        <a href="#contacto" class="px-8 py-3 rounded-xl bg-brand-red hover:bg-red-700 text-white font-bold shadow-lg shadow-brand-red/30 transition-all flex items-center gap-2">
+                            <i class="fas fa-paper-plane"></i> <span data-en="Let's Talk">Hablemos</span>
+                        </a>
+                        <a href="#sobre-mi" data-en="Get to know me" class="px-8 py-3 rounded-xl border-2 border-brand-aqua text-white hover:bg-brand-aqua hover:text-gray-950 font-bold transition-all shadow-lg shadow-brand-aqua/20">
+                            Conóceme
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="sobre-mi" class="py-24 bg-gray-900 border-y border-gray-800">
+           <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 data-en="Behind the Screen" class="text-3xl md:text-5xl font-bold text-white mb-4">
+                        Detrás de la pantalla
+                    </h2>
+                    <div class="h-1 w-24 bg-gradient-to-r from-brand-red to-brand-aqua mx-auto rounded"></div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                     <div class="bg-gray-800 rounded-2xl overflow-hidden shadow-lg border border-gray-700 hover:border-brand-aqua hover:scale-105 transition-all duration-300 group">
+                        <div class="h-48 relative overflow-hidden bg-gray-700">
+                          <img src="./1000272625.jpg" class="w-full h-full object-cover">
+                        </div>
+                    <div class="p-6">
+                         <h3 data-en="Who I Am" class="text-xl font-bold text-white mb-3 group-hover:text-brand-aqua transition-colors">Quién soy</h3>
+                            <p data-en="I consider myself a kind, serene, and highly cooperative person who easily connects with others. I deeply enjoy building strong interpersonal relationships, promoting an empathetic and collaborative environment inside and outside work." class="text-white text-sm leading-relaxed font-normal">
+                                Me considero una persona amable, serena y altamente cooperativa, con una gran facilidad para relacionarme con los demás. Disfruto profundamente conectar con las personas y construir relaciones interpersonales sólidas, promoviendo un ambiente de trabajo empático y colaborativo tanto dentro como fuera del entorno laboral.
+                            </p>
+                    </div>
+                </div>
+
+                    <div class="bg-gray-800 rounded-2xl overflow-hidden shadow-lg border border-gray-700 hover:border-brand-aqua hover:scale-105 transition-all duration-300 group">
+                        <div class="h-48 relative overflow-hidden bg-gray-700">
+                          <img src="./1000272638.jpg" class="w-full h-full object-cover">
+                        </div>
+                    <div class="p-6">
+                         <h3 data-en="Healthy Lifestyle" class="text-xl font-bold text-white mb-3 group-hover:text-brand-aqua transition-colors">Vida saludable</h3>
+                            <p data-en="Beyond code, I maintain an active lifestyle through regular physical exercise. This routine helps me cultivate discipline, perseverance, and balance, essential for staying focused on daily projects." class="text-white text-sm leading-relaxed font-normal">
+                             Más allá del ámbito del código, mantengo un estilo de vida saludable y activo a través del ejercicio físico regular. Esta rutina me permite cultivar valores como la disciplina, la perseverancia y el equilibrio personal, indispensables para conservar un alto nivel de energía y enfoque en mis proyectos cotidianos.                           </p>
+                    </div>
+                </div>
+            
+                     <div class="bg-gray-800 rounded-2xl overflow-hidden shadow-lg border border-gray-700 hover:border-brand-aqua hover:scale-105 transition-all duration-300 group">
+                        <div class="h-48 relative overflow-hidden bg-gray-700">
+                          <img src="./1000272641.jpg" class="w-full h-full object-cover">
+                        </div>
+                    <div class="p-6">
+                         <h3 data-en="Learning Progression" class="text-xl font-bold text-white mb-3 group-hover:text-brand-aqua transition-colors">Progresión de aprendizaje</h3>
+                            <p data-en="I am strongly committed to professional growth and continuous learning. I am motivated to constantly refine my skills, allowing me to adapt to challenges and add value to the team." class="text-white text-sm leading-relaxed font-normal">
+                        Tengo un fuerte compromiso con mi crecimiento profesional y la formación continua. Me motiva ampliar y perfeccionar mis conocimientos de forma constante, lo que me permite adaptarme a nuevos desafíos, aportar soluciones de valor al equipo y avanzar progresivamente en mi trayectoria laboral.                           </p>
+                    </div>
+                </div>
+             
+            </div>
+        </section>
+
+        <section id="habilidades" class="py-24 bg-gray-950">
+           <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">     
+                <div class="text-center mb-16">
+                    <h2 data-en="Technical Skills" class="text-3xl md:text-5xl font-bold text-white mb-4">Habilidades Técnicas</h2>
+                    <div class="h-1 w-24 bg-gradient-to-r from-brand-red to-brand-aqua mx-auto rounded"></div>
+                </div>
+
+                <div class="flex flex-wrap items-center justify-center gap-3 mb-10">
+                    <button data-en="All" class="skill-filter-btn active px-6 py-2.5 rounded-xl font-semibold text-sm transition-all bg-brand-red text-white shadow-lg shadow-brand-red/30" data-filter="all">
+                        Todos
+                    </button>
+                    <button data-en="Frontend" class="skill-filter-btn px-6 py-2.5 rounded-xl font-semibold text-sm transition-all bg-gray-800 text-white hover:bg-gray-700 border border-gray-700" data-filter="frontend">
+                        Frontend
+                    </button>
+                    <button data-en="Backend & DB" class="skill-filter-btn px-6 py-2.5 rounded-xl font-semibold text-sm transition-all bg-gray-800 text-white hover:bg-gray-700 border border-gray-700" data-filter="backend">
+                        Backend & BD
+                    </button>
+                    <button data-en="Automation & Tools" class="skill-filter-btn px-6 py-2.5 rounded-xl font-semibold text-sm transition-all bg-gray-800 text-white hover:bg-gray-700 border border-gray-700" data-filter="tools">
+                        Automatización y Herramientas
+                    </button>
+                </div>
+
+                <div id="skillsGrid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 sm:gap-6">
+                    
+                    <div class="skill-card cursor-pointer bg-gray-800/90 p-6 rounded-2xl border border-gray-700/80 hover:border-brand-aqua transition-all hover:shadow-xl hover:-translate-y-1 group" data-category="frontend" data-title="HTML5" data-desc-es="Estructuro mis proyectos web utilizando HTML5 semántico para mejorar el SEO, la accesibilidad y el mantenimiento del código a largo plazo." data-desc-en="I structure my web projects using semantic HTML5 to improve SEO, accessibility, and long-term code maintainability." data-icon="<i class='fab fa-html5 text-orange-400'></i>">
+                        <div class="w-12 h-12 rounded-xl bg-orange-500/20 text-orange-400 flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition-transform">
+                            <i class="fab fa-html5"></i>
+                        </div>
+                        <h3 class="font-bold text-lg text-white">HTML5</h3>
+                        <p data-en="Semantic Web Structure" class="text-xs text-white mt-1">Estructura Web Semántica</p>
+                    </div>
+
+                    <div class="skill-card cursor-pointer bg-gray-800/90 p-6 rounded-2xl border border-gray-700/80 hover:border-brand-aqua transition-all hover:shadow-xl hover:-translate-y-1 group" data-category="frontend" data-title="CSS" data-desc-es="Creo interfaces atractivas y responsivas. Tengo experiencia con Vanilla CSS, Flexbox, Grid y frameworks modernos como Tailwind CSS para un estilizado ágil." data-desc-en="I create attractive and responsive interfaces. I have experience with Vanilla CSS, Flexbox, Grid, and modern frameworks like Tailwind CSS for agile styling." data-icon="<i class='fab fa-css3-alt text-blue-400'></i>">
+                        <div class="w-12 h-12 rounded-xl bg-blue-500/20 text-blue-400 flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition-transform">
+                            <i class="fab fa-css3-alt"></i>
+                        </div>
+                        <h3 class="font-bold text-lg text-white">CSS</h3>
+                        <p data-en="Modern & Styled Design" class="text-xs text-white mt-1">Diseño Estilizado y Moderno</p>
+                    </div>
+
+                    <div class="skill-card cursor-pointer bg-gray-800/90 p-6 rounded-2xl border border-gray-700/80 hover:border-brand-aqua transition-all hover:shadow-xl hover:-translate-y-1 group" data-category="frontend" data-title="JavaScript" data-desc-es="Domino JavaScript moderno (ES6+), implementando lógica compleja en el cliente, consumo de APIs, manejo del DOM y programación asíncrona." data-desc-en="I master modern JavaScript (ES6+), implementing complex client-side logic, API consumption, DOM manipulation, and asynchronous programming." data-icon="<i class='fab fa-js text-yellow-400'></i>">
+                        <div class="w-12 h-12 rounded-xl bg-yellow-500/20 text-yellow-400 flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition-transform">
+                            <i class="fab fa-js"></i>
+                        </div>
+                        <h3 class="font-bold text-lg text-white">JavaScript</h3>
+                        <p data-en="Advanced Interactive Logic" class="text-xs text-white mt-1">Lógica Interactiva Avanzada</p>
+                    </div>
+
+                    <div class="skill-card cursor-pointer bg-gray-800/90 p-6 rounded-2xl border border-gray-700/80 hover:border-brand-red transition-all hover:shadow-xl hover:-translate-y-1 group" data-category="backend" data-title="Node.js" data-desc-es="Construyo servidores eficientes y escalables utilizando el entorno de ejecución Node.js, optimizando el rendimiento y el manejo de peticiones concurrentes." data-desc-en="I build efficient and scalable servers using the Node.js runtime environment, optimizing performance and concurrent request handling." data-icon="<i class='fab fa-node-js text-green-400'></i>">
+                        <div class="w-12 h-12 rounded-xl bg-green-500/20 text-green-400 flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition-transform">
+                            <i class="fab fa-node-js"></i>
+                        </div>
+                        <h3 class="font-bold text-lg text-white">Node.js</h3>
+                        <p data-en="Runtime Environment" class="text-xs text-white mt-1">Entorno de Ejecución</p>
+                    </div>
+
+                    <div class="skill-card cursor-pointer bg-gray-800/90 p-6 rounded-2xl border border-gray-700/80 hover:border-brand-red transition-all hover:shadow-xl hover:-translate-y-1 group" data-category="backend" data-title="Express.js" data-desc-es="Diseño APIs RESTful robustas usando Express.js. Manejo avanzado de rutas, middleware, seguridad y validación de datos en el servidor." data-desc-en="I design robust RESTful APIs using Express.js. Advanced routing, middleware, security, and server-side data validation." data-icon="<i class='fas fa-server text-gray-200'></i>">
+                        <div class="w-12 h-12 rounded-xl bg-gray-600/30 text-gray-200 flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition-transform">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <h3 class="font-bold text-lg text-white">Express.js</h3>
+                        <p data-en="Web Server Framework" class="text-xs text-white mt-1">Framework Servidor Web</p>
+                    </div>
+
+
+                    <div class="skill-card cursor-pointer bg-gray-800/90 p-6 rounded-2xl border border-gray-700/80 hover:border-brand-red transition-all hover:shadow-xl hover:-translate-y-1 group" data-category="backend" data-title="MongoDB" data-desc-es="Modelo bases de datos NoSQL utilizando MongoDB. Creo esquemas escalables con Mongoose, operaciones de agregación y optimización de consultas." data-desc-en="I model NoSQL databases using MongoDB. I create scalable schemas with Mongoose, aggregation operations, and query optimization." data-icon="<i class='fas fa-database text-emerald-400'></i>">
+                        <div class="w-12 h-12 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition-transform">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <h3 class="font-bold text-lg text-white">MongoDB</h3>
+                        <p data-en="NoSQL Database" class="text-xs text-white mt-1">Base de Datos NoSQL</p>
+                    </div>
+
+                    <div class="skill-card cursor-pointer bg-gray-800/90 p-6 rounded-2xl border border-gray-700/80 hover:border-brand-red transition-all hover:shadow-xl hover:-translate-y-1 group" data-category="backend" data-title="MySQL" data-desc-es="Gestiono bases de datos relacionales, diseñando modelos Entidad-Relación precisos, consultas complejas, joins y normalización de datos." data-desc-en="I manage relational databases, designing precise ER models, complex queries, joins, and data normalization." data-icon="<i class='fas fa-table text-blue-400'></i>">
+                        <div class="w-12 h-12 rounded-xl bg-blue-600/20 text-blue-400 flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition-transform">
+                            <i class="fas fa-table"></i>
+                        </div>
+                        <h3 class="font-bold text-lg text-white">MySQL</h3>
+                        <p data-en="Relational Database" class="text-xs text-white mt-1">Base de Datos Relacional</p>
+                    </div>
+
+                    <div class="skill-card cursor-pointer bg-gray-800/90 p-6 rounded-2xl border border-gray-700/80 hover:border-brand-aqua transition-all hover:shadow-xl hover:-translate-y-1 group" data-category="tools" data-title="Git & GitHub" data-desc-es="Controlo versiones de manera eficiente con Git y colaboro activamente mediante GitHub, manejando ramas, pull requests y resolución de conflictos." data-desc-en="I handle version control efficiently with Git and collaborate actively via GitHub, managing branches, pull requests, and conflict resolution." data-icon="<i class='fab fa-git-alt text-red-400'></i>">
+                        <div class="w-12 h-12 rounded-xl bg-red-500/20 text-red-400 flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition-transform">
+                            <i class="fab fa-git-alt"></i>
+                        </div>
+                        <h3 class="font-bold text-lg text-white">Git & GitHub</h3>
+                        <p data-en="Version Control" class="text-xs text-white mt-1">Control de Versiones</p>
+                    </div>
+
+                    <div class="skill-card cursor-pointer bg-gray-800/90 p-6 rounded-2xl border border-gray-700/80 hover:border-brand-aqua transition-all hover:shadow-xl hover:-translate-y-1 group" data-category="tools" data-title="Metodología Scrum" data-title-en="Scrum Methodology" data-desc-es="Gestión de trabajo en equipo ya sea en roles, eventos y trabajo iterativo para entregas de valor y planificación colaborativa" data-desc-en="Teamwork management through roles, events, and iterative work for value delivery and collaborative planning." data-icon="<i class='fas fa-sync-alt text-red-400'></i>">
+                        <div class="w-12 h-12 rounded-xl bg-red-500/20 text-red-400 flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition-transform">
+                            <i class="fas fa-sync-alt"></i>
+                        </div>
+                        <h3 class="font-bold text-lg text-white">Scrum</h3>
+                        <p data-en="Agile Project Management" class="text-xs text-white mt-1">Gestión ágil de proyectos</p>
+                    </div>
+
+                    <div class="skill-card cursor-pointer bg-gray-800/90 p-6 rounded-2xl border border-gray-700/80 hover:border-brand-aqua transition-all hover:shadow-xl hover:-translate-y-1 group" data-category="tools" data-title="n8n Workflow" data-desc-es="Automatizo tareas complejas e integro múltiples herramientas utilizando n8n para crear flujos de trabajo eficientes y sin intervención manual." data-desc-en="I automate complex tasks and integrate multiple tools using n8n to build efficient workflows without manual intervention." data-icon="<i class='fas fa-project-diagram text-rose-400'></i>">
+                        <div class="w-12 h-12 rounded-xl bg-rose-500/20 text-rose-400 flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition-transform">
+                            <i class="fas fa-project-diagram"></i>
+                        </div>
+                        <h3 class="font-bold text-lg text-white">n8n Workflow</h3>
+                        <p data-en="Process Automation" class="text-xs text-white mt-1">Automatización de Procesos</p>
+                    </div>
+
+                    <div class="skill-card cursor-pointer bg-gray-800/90 p-6 rounded-2xl border border-gray-700/80 hover:border-brand-aqua transition-all hover:shadow-xl hover:-translate-y-1 group" data-category="tools" data-title="Inteligencia Artificial" data-title-en="Artificial Intelligence" data-desc-es="Uso e integración de herramientas de IA para la optimización de procesos, automatización de tareas, desarrollo asistido y solución eficiente de problemas." data-desc-en="Use and integration of AI tools for process optimization, task automation, assisted development, and efficient problem-solving." data-icon="<i class='fas fa-robot text-blue-400'></i>">
+                        <div class="w-12 h-12 rounded-xl bg-blue-500/20 text-blue-400 flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition-transform">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <h3 data-en="Artificial Intelligence" class="font-bold text-lg text-white">Inteligencia Artificial</h3>
+                        <p data-en="Prompting & Integration" class="text-xs text-white mt-1">Prompting & Integración</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="proyectos" class="py-24 bg-gray-900 border-y border-gray-800">
+             <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 data-en="Featured Projects" class="text-3xl md:text-5xl font-bold text-white mb-4">Proyectos Destacados</h2>
+                    <div class="h-1 w-24 bg-gradient-to-r from-brand-red to-brand-aqua mx-auto rounded"></div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-gray-800 p-8 rounded-2xl shadow-xl border-l-4 border-brand-aqua relative overflow-hidden group hover:border-brand-red transition-all">
+                        <h3 data-en="RESTful E-commerce API" class="text-2xl font-bold text-white mb-3">Conciertos conxion</h3>
+                        <p data-en="A robust backend built to handle inventory, user management, and shopping carts. Features JWT authentication and advanced error handling." class="text-white mb-6 leading-relaxed">proyecto para compra y venta  de boletos para conciertos</p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="px-3 py-1 bg-gray-700 rounded-md text-xs font-semibold text-white shadow-sm">Html5</span>
+                            <span class="px-3 py-1 bg-gray-700 rounded-md text-xs font-semibold text-white shadow-sm">Css</span>
+                            <span class="px-3 py-1 bg-gray-700 rounded-md text-xs font-semibold text-white shadow-sm">JavaScript</span>
+                        </div>
+                        <a href="https://github.com/pablo-navas/conciertoconexion_pablonavas.git" class="inline-flex items-center gap-2 text-brand-aqua font-bold hover:text-white transition-colors">
+                            <span data-en="View Demo">Ver demostración</span> <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+
+                    <div class="bg-gray-800 p-8 rounded-2xl shadow-xl border-l-4 border-brand-aqua relative overflow-hidden group hover:border-brand-red transition-all">
+                        <h3 data-en="Web Management Dashboard" class="text-2xl font-bold text-white mb-3">el queso es rico</h3>
+                        <p data-en="Responsive administrative interface interacting with the API. Features data visualizations and interactive forms." class="text-white mb-6 leading-relaxed">Interfaz administrativa responsiva donde el cliente interactúa con la API. Presentación visual de datos y formularios interactivos.</p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="px-3 py-1 bg-gray-700 rounded-md text-xs font-semibold text-white shadow-sm">JavaScript</span>
+                            <span class="px-3 py-1 bg-gray-700 rounded-md text-xs font-semibold text-white shadow-sm">HTML</span>
+                            <span class="px-3 py-1 bg-gray-700 rounded-md text-xs font-semibold text-white shadow-sm">CSS</span>
+                        </div>
+                        <a href="#" class="inline-flex items-center gap-2 text-brand-aqua font-bold hover:text-white transition-colors">
+                            <span data-en="View Demo">Ver demostración</span> <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="habilidades-adaptativas" class="py-24 bg-gray-950">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center mb-16">
+            <h2 data-en="Adaptive Skills" class="text-3xl md:text-5xl font-bold text-white mb-4">Habilidades Adaptativas</h2>
+            <div class="h-1 w-24 bg-gradient-to-r from-brand-red to-brand-aqua mx-auto rounded"></div>
+        </div>
+
+        <div class="flex flex-wrap items-center justify-center gap-3 mb-10">
+            <button data-en="All" class="skill-filter-btn active px-6 py-2.5 rounded-xl font-semibold text-sm transition-all bg-brand-red text-white shadow-lg shadow-brand-red/30" data-filter="all">
+                Todas
+            </button>
+            <button data-en="Interpersonal & Social" class="skill-filter-btn px-6 py-2.5 rounded-xl font-semibold text-sm transition-all bg-gray-800 text-white hover:bg-gray-700 border border-gray-700" data-filter="interpersonal">
+                Interpersonales y Sociales
+            </button>
+            <button data-en="Innovation & Problem Solving" class="skill-filter-btn px-6 py-2.5 rounded-xl font-semibold text-sm transition-all bg-gray-800 text-white hover:bg-gray-700 border border-gray-700" data-filter="innovacion">
+                Innovación y Resolución
+            </button>
+            <button data-en="Languages" class="skill-filter-btn px-6 py-2.5 rounded-xl font-semibold text-sm transition-all bg-gray-800 text-white hover:bg-gray-700 border border-gray-700" data-filter="Lenguajes">
+                Lenguajes
+            </button>
+        </div>
+
+        <!-- Skills Grid Container -->
+        <div id="skillsGrid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 sm:gap-6">
+            
+            <!-- Amable -->
+            <div class="skill-card cursor-pointer bg-gray-800/90 p-6 rounded-2xl border border-gray-700/80 hover:border-brand-aqua transition-all hover:shadow-xl hover:-translate-y-1 group" 
+                 data-category="interpersonal" 
+                 data-title="Amabilidad" 
+                 data-title-en="Kindness"
+                 data-desc-es="Procuro mantener un trato cercano, respetuoso y cordial en todo momento. Aporto una actitud positiva que facilita la convivencia diaria y reduce tensiones en el entorno laboral." 
+                 data-desc-en="I try to maintain a close, respectful, and cordial interaction at all times. I bring a positive attitude that facilitates daily teamwork."
+                 data-icon="<i class='fas fa-heart text-pink-400'></i>">
+                <div class="w-12 h-12 rounded-xl bg-pink-500/20 text-pink-400 flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition-transform">
+                    <i class="fas fa-heart"></i>
+                </div>
+                <h3 data-en="Kind" class="font-bold text-lg text-white">Amable</h3>
+                <p data-en="Friendly & Positive Approach" class="text-xs text-white/80 mt-1">Trato Cercano y Positivo</p>
+            </div>
+
+            <div class="skill-card cursor-pointer bg-gray-800/90 p-6 rounded-2xl border border-gray-700/80 hover:border-brand-aqua transition-all hover:shadow-xl hover:-translate-y-1 group" 
+                 data-category="interpersonal" 
+                 data-title="Paciencia" 
+                 data-title-en="Patience"
+                 data-desc-es="Mantengo la calma y la compostura en situaciones complejas o bajo momentos de alta presión, permitiendo analizar los problemas con serenidad antes de actuar." 
+                 data-desc-en="I stay calm and composed during complex or high-pressure situations, analyzing problems serenely before taking action."
+                 data-icon="<i class='fas fa-hourglass-half text-amber-400'></i>">
+                <div class="w-12 h-12 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition-transform">
+                    <i class="fas fa-hourglass-half"></i>
+                </div>
+                <h3 data-en="Patient" class="font-bold text-lg text-white">Paciente</h3>
+                <p data-en="Composure Under Pressure" class="text-xs text-white/80 mt-1">Calma y Gestión de Presión</p>
+            </div>
+
+            <div class="skill-card cursor-pointer bg-gray-800/90 p-6 rounded-2xl border border-gray-700/80 hover:border-brand-aqua transition-all hover:shadow-xl hover:-translate-y-1 group" 
+                 data-category="interpersonal" 
+                 data-title="Empatía" 
+                 data-title-en="Empathy"
+                 data-desc-es="Comprendo y me adapto a las necesidades, emociones y puntos de vista de los demás. Esta cualidad fortalece la comunicación efectiva tanto con compañeros como con usuarios o clientes." 
+                 data-desc-en="I understand and adapt to the needs, emotions, and perspectives of others, strengthening effective communication."
+                 data-icon="<i class='fas fa-hand-holding-heart text-indigo-400'></i>">
+                <div class="w-12 h-12 rounded-xl bg-indigo-500/20 text-indigo-400 flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition-transform">
+                    <i class="fas fa-hand-holding-heart"></i>
+                </div>
+                <h3 data-en="Empathetic" class="font-bold text-lg text-white">Empático</h3>
+                <p data-en="Active Listening & Insight" class="text-xs text-white/80 mt-1">Escucha y Comprensión</p>
+            </div>
+
+            <div class="skill-card cursor-pointer bg-gray-800/90 p-6 rounded-2xl border border-gray-700/80 hover:border-brand-aqua transition-all hover:shadow-xl hover:-translate-y-1 group" 
+                 data-category="Lenguajes"  
+                 data-title="Inglés B1.2" 
+                 data-title-en="English B1.2"
+                 data-desc-es="Nivel intermedio con capacidad para comunicarme eficazmente, comprender documentación técnica, participar en reuniones y redactar correos en el entorno profesional." 
+                 data-desc-en="Intermediate level with the ability to communicate effectively, understand technical documentation, join meetings, and write emails."
+                 data-icon="<i class='fas fa-language text-emerald-400'></i>">
+                    <div class="w-12 h-12 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-language"></i>
+                    </div>
+                    <h3 data-en="English B1.2" class="font-bold text-lg text-white">Inglés B1.2</h3>
+                    <p data-en="Technical Intermediate" class="text-xs text-white mt-1">Nivel Intermedio Técnico</p>
+            </div>
+                
+            <div class="skill-card cursor-pointer bg-gray-800/90 p-6 rounded-2xl border border-gray-700/80 hover:border-brand-aqua transition-all hover:shadow-xl hover:-translate-y-1 group" 
+                 data-category="Lenguajes" 
+                 data-title="Español Nativo" 
+                 data-title-en="Native Spanish"
+                 data-desc-es="Lengua materna. Excelente dominio de la comunicación oral y escrita, articulación clara de ideas y redacción profesional." 
+                 data-desc-en="Native speaker. Excellent command of oral and written communication, clear articulation of ideas, and professional writing."
+                 data-icon="<i class='fas fa-language text-indigo-400'></i>">
+                    <div class="w-12 h-12 rounded-xl bg-indigo-500/20 text-indigo-400 flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-language"></i>
+                    </div>
+                    <h3 data-en="Spanish" class="font-bold text-lg text-white">Español</h3>
+                    <p data-en="Native" class="text-xs text-white mt-1">Nativo</p>
+            </div>
+
+            <div class="skill-card cursor-pointer bg-gray-800/90 p-6 rounded-2xl border border-gray-700/80 hover:border-brand-aqua transition-all hover:shadow-xl hover:-translate-y-1 group" 
+                 data-category="interpersonal" 
+                 data-title="Colaboración" 
+                 data-title-en="Collaboration"
+                 data-desc-es="Trabajo activamente en equipo compartiendo conocimientos, apoyando a otros en sus tareas y priorizando siempre el objetivo colectivo sobre el individual." 
+                 data-desc-en="I actively work in teams, sharing knowledge, assisting others, and prioritizing collective goals over individual ones."
+                 data-icon="<i class='fas fa-handshake text-blue-400'></i>">
+                <div class="w-12 h-12 rounded-xl bg-blue-500/20 text-blue-400 flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition-transform">
+                    <i class="fas fa-handshake"></i>
+                </div>
+                <h3 data-en="Collaborative" class="font-bold text-lg text-white">Colaborativo</h3>
+                <p data-en="Teamwork Oriented" class="text-xs text-white/80 mt-1">Trabajo en Equipo</p>
+            </div>
+
+            <div class="skill-card cursor-pointer bg-gray-800/90 p-6 rounded-2xl border border-gray-700/80 hover:border-brand-aqua transition-all hover:shadow-xl hover:-translate-y-1 group" 
+                 data-category="innovacion" 
+                 data-title="Creatividad" 
+                 data-title-en="Creativity"
+                 data-desc-es="Aporto ideas originales y enfoques fuera de lo convencional para abordar retos, optimizar procesos o crear experiencias visuales y funcionales novedosas." 
+                 data-desc-en="I contribute original ideas and unconventional approaches to tackle challenges and optimize processes."
+                 data-icon="<i class='fas fa-lightbulb text-yellow-400'></i>">
+                <div class="w-12 h-12 rounded-xl bg-yellow-500/20 text-yellow-400 flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition-transform">
+                    <i class="fas fa-lightbulb"></i>
+                </div>
+                <h3 data-en="Creative" class="font-bold text-lg text-white">Creativo</h3>
+                <p data-en="Innovative Solutions" class="text-xs text-white/80 mt-1">Soluciones Innovadoras</p>
+            </div>
+
+            <div class="skill-card cursor-pointer bg-gray-800/90 p-6 rounded-2xl border border-gray-700/80 hover:border-brand-aqua transition-all hover:shadow-xl hover:-translate-y-1 group" 
+                 data-category="innovacion" 
+                 data-title="Tenacidad" 
+                 data-title-en="Tenacity"
+                 data-desc-es="Persevero ante los obstáculos y errores. Mi determinación me impulsa a insistir, aprender del proceso y no rendirme hasta alcanzar el resultado deseado." 
+                 data-desc-en="I persevere through obstacles and errors. My determination drives me to keep learning and achieve goals."
+                 data-icon="<i class='fas fa-fire text-orange-400'></i>">
+                <div class="w-12 h-12 rounded-xl bg-orange-500/20 text-orange-400 flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition-transform">
+                    <i class="fas fa-fire"></i>
+                </div>
+                <h3 data-en="Tenacious" class="font-bold text-lg text-white">Tenaz</h3>
+                <p data-en="Perseverance & Drive" class="text-xs text-white/80 mt-1">Perseverancia y Firmeza</p>
+            </div>
+
+            <!-- Versatilidad -->
+            <div class="skill-card cursor-pointer bg-gray-800/90 p-6 rounded-2xl border border-gray-700/80 hover:border-brand-aqua transition-all hover:shadow-xl hover:-translate-y-1 group" 
+                 data-category="innovacion" 
+                 data-title="Versatilidad" 
+                 data-title-en="Versatility"
+                 data-desc-es="Me adapto rápidamente a nuevos contextos, dinámicas de trabajo o tecnologías. Cuento con una alta capacidad de aprendizaje para asumir diversos roles con agilidad." 
+                 data-desc-en="I adapt quickly to new contexts, workflows, or technologies with strong learning agility."
+                 data-icon="<i class='fas fa-shapes text-teal-400'></i>">
+                <div class="w-12 h-12 rounded-xl bg-teal-500/20 text-teal-400 flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition-transform">
+                    <i class="fas fa-shapes"></i>
+                </div>
+                <h3 data-en="Versatile" class="font-bold text-lg text-white">Versatilidad</h3>
+                <p data-en="Flexibility & Agility" class="text-xs text-white/80 mt-1">Flexibilidad y Aprendizaje</p>
+            </div>
+
+            <div class="skill-card cursor-pointer bg-gray-800/90 p-6 rounded-2xl border border-gray-700/80 hover:border-brand-aqua transition-all hover:shadow-xl hover:-translate-y-1 group" 
+                 data-category="innovacion" 
+                 data-title="Analítico" 
+                 data-title-en="Analytical"
+                 data-desc-es="Capacidad para descomponer problemas complejos, identificar patrones y tomar decisiones fundamentadas mediante un enfoque lógico, estructurado y basado en datos." 
+                 data-desc-en="Ability to decompose complex problems, identify patterns, and make informed decisions through a logical approach."
+                 data-icon="<i class='fas fa-brain text-teal-400'></i>">
+                <div class="w-12 h-12 rounded-xl bg-teal-500/20 text-teal-400 flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition-transform">
+                    <i class="fas fa-brain"></i>
+                </div>        
+            
+                <h3 data-en="Analytical" class="font-bold text-lg text-white">Analítico</h3>
+                <p data-en="Logical Thinking & Problem Solving" class="text-xs text-white mt-1">Pensamiento Lógico y Resolución</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+        <section id="contacto" class="py-24 bg-gray-950">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <div class="mb-16">
+                    <h2 data-en="Contact" class="text-3xl md:text-5xl font-bold text-white mb-4">Contacto</h2>
+                    <div class="h-1 w-24 bg-gradient-to-r from-brand-red to-brand-aqua mx-auto rounded"></div>
+                    
+                    <p data-en="I am open to new opportunities and collaborations. Get in touch!" class="mt-6 text-white text-lg">Estoy disponible para nuevas oportunidades y colaboraciones. ¡Contáctame!</p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    
+                    <!-- GitHub -->
+                    <a href="https://github.com/pablo-navas" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center p-6 bg-gray-900 rounded-2xl shadow-md border border-gray-800 hover:-translate-y-2 hover:shadow-xl hover:border-brand-red transition-all group">
+                        <div class="w-16 h-16 rounded-full bg-gray-800 flex items-center justify-center text-3xl text-white group-hover:text-brand-red transition-colors mb-4">
+                            <i class="fab fa-github"></i>
+                        </div>
+                        <h4 class="font-bold text-lg text-white mb-1">GitHub</h4>
+                        <span class="text-white text-xs">/pablo-navas</span>
+                    </a>
+
+                    <!-- WhatsApp -->
+                    <a href="https://wa.me/50254165382" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center p-6 bg-gray-900 rounded-2xl shadow-md border border-gray-800 hover:-translate-y-2 hover:shadow-xl hover:border-brand-aqua transition-all group">
+                        <div class="w-16 h-16 rounded-full bg-brand-aqua/20 flex items-center justify-center text-3xl text-brand-aqua group-hover:bg-brand-aqua group-hover:text-gray-950 transition-colors mb-4">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <h4 class="font-bold text-lg text-white mb-1">WhatsApp</h4>
+                        <span class="text-white text-xs">+502 5416 5382</span>
+                    </a>
+
+                    <!-- LinkedIn -->
+                    <a href="https://www.linkedin.com/in/pablo-navas-25046b28b/" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center p-6 bg-gray-900 rounded-2xl shadow-md border border-gray-800 hover:-translate-y-2 hover:shadow-xl hover:border-brand-aqua transition-all group">
+                        <div class="w-16 h-16 rounded-full bg-blue-900/30 flex items-center justify-center text-3xl text-blue-400 group-hover:text-brand-aqua transition-colors mb-4">
+                            <i class="fab fa-linkedin-in"></i>
+                        </div>
+                        <h4 class="font-bold text-lg text-white mb-1">LinkedIn</h4>
+                        <span class="text-white text-xs break-all">/pablo-navas-25046b28b/</span>
+                    </a>
+
+                    <!-- Gmail -->
+                    <a href="mailto:pablonavasguate@gmail.com" class="flex flex-col items-center p-6 bg-gray-900 rounded-2xl shadow-md border border-gray-800 hover:-translate-y-2 hover:shadow-xl hover:border-brand-red transition-all group">
+                        <div class="w-16 h-16 rounded-full bg-red-900/30 flex items-center justify-center text-3xl text-brand-red group-hover:bg-brand-red group-hover:text-white transition-colors mb-4">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h4 class="font-bold text-lg text-white mb-1">Gmail</h4>
+                        <span class="text-white font-medium text-xs break-all text-center">pablonavasguate@gmail.com</span>
+                    </a>
+
+                </div>
+            </div>
+        </section>
+
+        <div id="skillModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 sm:p-6">
+         
+            <div id="skillModalBackdrop" class="absolute inset-0 bg-gray-950/80 backdrop-blur-sm transition-opacity duration-300 opacity-0 cursor-pointer"></div>
+            
+            <div id="skillModalContent" class="relative bg-gray-900 border border-gray-700 rounded-2xl shadow-2xl max-w-md w-full p-6 sm:p-8 transform scale-95 opacity-0 transition-all duration-300 z-10">
+                <button id="closeSkillModal" class="absolute top-4 right-4 w-8 h-8 flex items-center justify-center rounded-full bg-gray-800 text-gray-400 hover:text-white hover:bg-brand-red transition-all">
+                    <i class="fas fa-times"></i>
+                </button>
+                
+                <div class="flex items-center gap-5 mb-5">
+                    <div id="modalSkillIcon" class="w-16 h-16 rounded-xl bg-gray-800 flex items-center justify-center text-4xl shadow-inner border border-gray-700">
+                    </div>
+                    <h3 id="modalSkillTitle" class="text-2xl sm:text-3xl font-bold text-white">Title</h3>
+                </div>
+                
+                <p id="modalSkillDesc" class="text-gray-300 text-base leading-relaxed mb-4 font-normal">
+                    Description goes here...
+                </p>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="bg-gray-900 py-12 md:py-16 border-t border-gray-800">
+        <div class="max-w-5xl mx-auto px-6 text-center">
+            <p data-en='"How shall a man be able to groom his own horse, or polish his spear and helmet, if he has lost the habit of taking care of his own person, which is his most precious possession?"' class="text-white font-medium text-xl md:text-2xl leading-relaxed italic">
+                "¿Cómo un hombre va a ser capaz de cuidar su propio caballo, pulir su lanza y su casco, si ha perdido la costumbre de atender a su propia persona, que es su posesión más preciada?"
+            </p>
+            <p class="mt-4 text-lg md:text-xl font-bold">
+                — <span class="fire-text" data-en="Alexander the Great">Alejandro Magno</span>
+            </p>
+        </div>
+    </footer>
+
+    <script src="/script.js"></script>
+</body>
+</html>
